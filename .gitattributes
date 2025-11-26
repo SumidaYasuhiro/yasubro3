@@ -1,0 +1,7 @@
+*.unity -text
+*.prefab -text
+*.meta -text
+*.asset -text
+*.controller -text
+*.anim -text
+*.mat -text
