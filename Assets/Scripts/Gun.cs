@@ -21,7 +21,7 @@ public class Gun : MonoBehaviour
     {
         timeSinceLastShot = fireRate;
         player = GameObject.Find("Player").transform;
-        SetOffset(new Vector2(1, 0.5f));
+        // SetOffset(new Vector2(1, 0.5f));
     }
 
     private void Update()
