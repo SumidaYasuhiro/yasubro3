@@ -3,6 +3,7 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     [SerializeField] GameObject enemyPrefab;
+    [SerializeField] GameObject chargerPrefab;
     [SerializeField] float timeBetweenSpawns = 0.5f;
     float currentTimeBetweenSpawns;
 
@@ -40,7 +41,10 @@ public class EnemyManager : MonoBehaviour
 
     void SpawnEnemy()
     {
-        var e = Instantiate(enemyPrefab, RandomPosition(), Quaternion.identity);
+        var roll = Random.Range(0, 100);
+        var enemyType = roll < 90 ? enemyPrefab : chargerPrefab;
+
+        var e = Instantiate(enemyType, RandomPosition(), Quaternion.identity);
         e.transform.SetParent(enemiesParent);
     }
 
