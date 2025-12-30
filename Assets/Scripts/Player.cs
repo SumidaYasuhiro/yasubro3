@@ -70,5 +70,6 @@ public class Player : MonoBehaviour
     void Die()
     {
         dead = true;
+        GameManager.instance.GameOver();
     }
 }
