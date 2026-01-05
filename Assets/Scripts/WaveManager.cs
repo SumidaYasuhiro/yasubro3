@@ -37,6 +37,7 @@ public class WaveManager : MonoBehaviour
 
     private void StartNewWave()
     {
+        AudioManager.Instance.PlayBgm();//
         StopAllCoroutines();
         timeText.color = Color.white;
         currentWave++;
@@ -62,6 +63,7 @@ public class WaveManager : MonoBehaviour
 
     private void WaveComplete()
     {
+        AudioManager.Instance.StopBgm();//
         StopAllCoroutines();
         EnemyManager.Instance.DestroyEnemies();
         waveRunning = false;

@@ -61,6 +61,8 @@ public class Enemy : MonoBehaviour
 
     void StartCharging()
     {
+        AudioManager.Instance.PlayChargerLoopForSeconds(chargeDuration);//
+
         if (!WaveManager.Instance.WaveRunning()) return;//
 
         isPreparingCharge = false;

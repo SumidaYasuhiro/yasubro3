@@ -77,6 +77,8 @@ public class Gun : MonoBehaviour
 
     void Shoot()
     {
+        AudioManager.Instance.PlayGunShot();//
+
         var muzzleGo = Instantiate(muzzle, muzzlePosition.position, transform.rotation);
         muzzleGo.transform.SetParent(transform);
         Destroy(muzzleGo, 0.05f);
