@@ -16,3 +16,6 @@ Logs/
 
 # macOS
 .DS_Store
+
+# Build outputs (do not commit)
+*.app
